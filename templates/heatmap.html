@@ -5,6 +5,8 @@
 <title>Google Maps - pygmaps </title>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false&region=IN"></script>
 	<script type="text/javascript">
+		var data = JSON.parse('{{data | escapejs}}')
+
 		function initialize() {
 			var centerlatlng = new google.maps.LatLng(28.636700, 77.102100);
 			var myOptions = {
@@ -14,25 +16,17 @@
 			};
 			var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-		var heatmap_points = [
 
+
+		var heatmap_points = [];
 
 		// gurugram points
-		new google.maps.LatLng(28.4595, 77.0266),
-		new google.maps.LatLng(28.4595, 77.0266),
-		new google.maps.LatLng(28.4595, 77.0266),
-		new google.maps.LatLng(28.4595, 77.0266),
-		new google.maps.LatLng(28.4595, 77.0266),
-		new google.maps.LatLng(28.4595, 77.0266),
-		new google.maps.LatLng(28.4595, 77.0266),
+		for(x in data) {
+			a = new google.maps.LatLng(parseFloat(data[x]['latitude']), parseFloat(data[x]['longitude']))
+			console.log(parseFloat(data[x]['latitude']))
+			heatmap_points.push(a)
+		}
 
-		// Noida points
-		new google.maps.LatLng(28.5355, 77.3910),
-		new google.maps.LatLng(28.5355, 77.3910),
-		new google.maps.LatLng(28.5355, 77.3910),
-
-
-		];
 
 		var pointArray = new google.maps.MVCArray(heatmap_points);
 		var heatmap;

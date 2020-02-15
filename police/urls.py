@@ -6,5 +6,6 @@ from .views import *
 
 
 urlpatterns = [
-	path('get_analysis', get_analysis, name='get_analysis')
+	path('get_analysis', get_analysis, name='get_analysis'),
+	path('get_heatmap', display_heatmap, name='get_heatmap')
 ]
