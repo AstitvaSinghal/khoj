@@ -13,7 +13,14 @@ def get_analysis(request):
     data = json.dumps(data)
     return render(request, 'analyze.html', {'json_string': data})
 
+def police_dashboard(request):
+    return render(request, 'police_dashboard.html')
 
+def get_upload_lost_person_image_form(request):
+    return render(request, 'upload_lost_person_image_form.html')
+
+def get_upload_found_person_image_form(request):
+	return render(request, 'upload_found_person_image_form.html')
 
 def display_heatmap(request):
 	fp = open("core/police_stn_coordinates.json","r")
