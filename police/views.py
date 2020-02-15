@@ -11,3 +11,9 @@ def get_analysis(request):
     data = {'lost_stats': lost_stats,'found_stats' : found_stats,'lost_and_found_relation' : lost_and_found_relation}
     data = json.dumps(data)
     return render(request, 'analyze.html', {'json_string': data})
+
+def police_dashboard(request):
+    return render(request, 'police_dashboard.html')
+
+def get_upload_lost_person_image_form(request):
+    return render(request, 'upload_lost_person_image_form.html')
