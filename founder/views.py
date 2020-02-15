@@ -51,12 +51,12 @@ def upload_found_person_image_form(request):
 		
 		# # Sending Text Message
 
-		# client = boto3.client('sns',region_name='us-east-1')
-		# status=client.publish(
-		# 	PhoneNumber="+917727906300",
-		# 	Message=message
-		# )
-		# # print(status)
+		client = boto3.client('sns',region_name='us-east-1')
+		status=client.publish(
+			PhoneNumber="+917727906300",
+			Message=message
+		)
+		# print(status)
 
 		# # Sending Email Notification
 		
