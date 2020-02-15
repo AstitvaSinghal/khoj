@@ -50,13 +50,16 @@ def upload_found_person_image_form(request):
 		message = "Lost person "+person_name+"("+addhar_num+") has been found at "+request.POST['appearence_place']
 		
 		# # Sending Text Message
-
-		# client = boto3.client('sns',region_name='us-east-1')
-		# status=client.publish(
-		# 	PhoneNumber="+917727906300",
-		# 	Message=message
-		# )
-		# # print(status)
+		try:
+			client = boto3.client('sns',region_name='us-east-1')
+			status=client.publish(
+				PhoneNumber="+917727906300",
+				Message=message
+			)
+			print("Successfully sent message")
+		except:
+			print("Error: unable to send message")
+		# print(status)
 
 		# # Sending Email Notification
 		
