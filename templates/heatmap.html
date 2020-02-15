@@ -5,7 +5,8 @@
 <title>Google Maps - pygmaps </title>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false&region=IN"></script>
 	<script type="text/javascript">
-		var data = JSON.parse('{{data | escapejs}}')
+		var coord_data = JSON.parse('{{coord_data | escapejs}}');
+		var lost_stats = JSON.parse('{{lost_stats | escapejs}}');
 
 		function initialize() {
 			var centerlatlng = new google.maps.LatLng(28.636700, 77.102100);
@@ -21,10 +22,13 @@
 		var heatmap_points = [];
 
 		// gurugram points
-		for(x in data) {
-			a = new google.maps.LatLng(parseFloat(data[x]['latitude']), parseFloat(data[x]['longitude']))
-			console.log(parseFloat(data[x]['latitude']))
-			heatmap_points.push(a)
+		for(lost_stat in lost_stats) {
+			for(var i=0;i<parseInt(lost_stats[lost_stat]);i++)
+			{
+				a = new google.maps.LatLng(parseFloat(coord_data[lost_stat]['latitude']), parseFloat(coord_data[lost_stat]['longitude']))
+				// console.log(parseFloat(data[x]['latitude']))
+				heatmap_points.push(a)
+			}
 		}
 
 
