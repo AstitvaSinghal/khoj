@@ -19,6 +19,8 @@ def police_dashboard(request):
 def get_upload_lost_person_image_form(request):
     return render(request, 'upload_lost_person_image_form.html')
 
+def get_upload_found_person_image_form(request):
+	return render(request, 'upload_found_person_image_form.html')
 
 def display_heatmap(request):
 	fp = open("core/police_stn_coordinates.json","r")

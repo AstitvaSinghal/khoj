@@ -25,7 +25,7 @@
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">Submit Found Entry</button>
         </form>
-		<form  id="submit_another_button" action="get_upload_lost_person_image_form other" method="POST" enctype="multipart/form-data">
+		<form  id="submit_another_button" action="get_upload_found_person_image_form" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">Submit Missing Entry</button>
@@ -35,7 +35,7 @@
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">View Data Charts</button>
         </form>
-		<form  id="submit_another_button" action="submit_another" method="POST" enctype="multipart/form-data">
+		<form  id="submit_another_button" action="get_heatmap" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">View Heat Map</button>
