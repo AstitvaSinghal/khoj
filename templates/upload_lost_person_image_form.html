@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<title>Enter Lost Person Details</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 		<!-- jQuery library -->
@@ -14,10 +15,10 @@
 		<script src="{% static 'javascript/upload_lost_person_image_form.js' %}"></script>
 	</head>
 	<body>
-			<div class="jumbotron">
+			<div class="jumbotron" style="background-image: url('{% static 'img/TRAFFICKING+BOOK+COVER.jpg' %}'); background-repeat: no-repeat; background-size: 1515px 300px">
 					<center>
-						<h1>KHOJ</h1>      
-						<p>A platform to prevent child trafficking.</p>
+						<h1 style="color: white; font-family: 'Roboto', sans-serif;">KHOJ</h1>      
+						<p style="color: white; ">A platform to prevent child trafficking.</p>
 					</center>
 			</div>
 			<form id="lost_person_details" action="upload_lost_person_details" method="POST" enctype="multipart/form-data">

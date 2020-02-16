@@ -5,7 +5,7 @@
 <head>
 	<title>Guardian</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -15,10 +15,12 @@
 </head>
 <body>
 	<center>
-		<div class="jumbotron">
-	  		<h1>KHOJ</h1>      
-	  		<p>A platform to prevent child trafficking.</p>
-		</div>
+			<div class="jumbotron" style="background-image: url('{% static 'img/TRAFFICKING+BOOK+COVER.jpg' %}'); background-repeat: no-repeat; background-size: 1515px 300px">
+				<center>
+					<h1 style="color: white; font-family: 'Roboto', sans-serif;">KHOJ</h1>      
+					<p style="color: white; ">A platform to prevent child trafficking.</p>
+				</center>
+			</div>
 		<div style="margin-top:40px; border-style: bold" class="container">
 
 			<form id="guardian_form" action="upload_found_person_image_form" method="POST" enctype="multipart/form-data">
