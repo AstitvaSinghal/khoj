@@ -25,21 +25,25 @@
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">Submit Found Entry</button>
         </form>
+        <br>
 		<form  id="submit_another_button" action="get_upload_found_person_image_form" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">Submit Missing Entry</button>
         </form>
+        <br>
 		<form  id="submit_another_button" action="get_analysis" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">View Data Charts</button>
         </form>
+        <br>
 		<form  id="submit_another_button" action="get_heatmap" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
             <br>
             <button type="submit" class="btn btn-primary btn-lg" id="submit_another_entry">View Heat Map</button>
         </form>
+        <br>
     </center>
 </body>
 </html>
